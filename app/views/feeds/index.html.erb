@@ -13,7 +13,10 @@
   <tbody>
     <% @feeds.each do |feed| %>
       <tr>
-        <td><%= feed.image %></td>
+        <td colspan="4"><%= image_tag feed.image.url %></td>
+      </tr>
+      <tr>
+        <td><%= feed.image.url %></td>
         <td><%= link_to 'Show', feed %></td>
         <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
         <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
