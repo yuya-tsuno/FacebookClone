@@ -8,6 +8,7 @@ ja:
         title: タイトル
         content: 内容
       user:
+      # session:
         title: タイトル
         name: 名前
         email: メールアドレス

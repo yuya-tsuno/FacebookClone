@@ -9,8 +9,11 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  
+  # エラー画面変更のため一旦alseにしました、元はtrueです
   # Show full error reports.
   config.consider_all_requests_local = true
+
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
