@@ -1,14 +1,13 @@
 ja:
   activerecord:
     models:
-      blog: ブログ
+      feed: フィード
       user: ユーザー
     attributes:
-      blog:
-        title: タイトル
+      feed:
+        image: 画像
         content: 内容
       user:
-      # session:
         title: タイトル
         name: 名前
         email: メールアドレス

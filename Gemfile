@@ -36,3 +36,5 @@ gem 'bcrypt', '3.1.11'
 
 gem 'carrierwave'
 gem 'mini_magick'
+
+gem 'rails-i18n', '~> 5.1'
