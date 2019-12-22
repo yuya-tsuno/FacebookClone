@@ -18,6 +18,9 @@
         <td colspan="5"><%= image_tag feed.image.url %></td>
       </tr>
       <tr>
+        <td colspan="5"><h3>content: <%= feed.content %></h3></td>
+      </tr>
+      <tr>
         <td><%= feed.image.url %></td>
         <td><p>Posted by <%= feed.user.name %></p></td>
         <td><%= link_to 'Show', feed %></td>
