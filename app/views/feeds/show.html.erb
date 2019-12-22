@@ -4,6 +4,7 @@
   <strong>Image:</strong>
   <%= image_tag @feed.image.url %>
   <%= @feed.image.url %>
+  <p>Posted by <%= @feed.user.name %></p>
 </p>
 
 <%= link_to 'Edit', edit_feed_path(@feed) %> |
