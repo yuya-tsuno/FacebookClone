@@ -13,4 +13,11 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+
+// jquery.jsの居場所を示すパス
+//= require jquery/dist/jquery.js
+
+//= require bootstrap/dist/js/bootstrap.min
+
+// app/assets/javascript配下にあるjsファイルを全て読み込む
 //= require_tree .

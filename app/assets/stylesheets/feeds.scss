@@ -1,3 +1,40 @@
 // Place all the styles related to the feeds controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  position: relative;
+  min-height: 100%;
+  background-color: rgb(196, 196, 196);
+}
+
+body {
+  text-align: center;
+}
+
+header {
+  color: white;
+  width: 100%;
+  background-color: #1d6de6;
+  height: 100px;
+}
+
+header  a {
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+
+footer {
+  width: 100%;
+  background-color:#1d6de6;
+  padding: 20px 0 10px 0;
+  color: white;
+  margin: auto;
+  padding-bottom: 10px;
+  font-size: 12px;
+  // position: absolute;
+  bottom: 0;
+}
+

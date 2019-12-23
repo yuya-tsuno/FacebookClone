@@ -4,26 +4,30 @@
     <title>ReFacebookClone</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "#{key}") %>
-    <% end %>
+    <header>
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "#{key}") %>
+      <% end %>
 
-    <% if logged_in? %>
-      <h2>Hello, <%= current_user.name %>! Please enjoy photos!</h2>
-      <%= link_to "Your Profile", user_path(current_user.id) %>
-      <%= link_to "Logout", session_path(current_user.id), method: :delete %>
-    <% else %>
-      <h2>Hello,Guest! Please log in here!</h2>
-      <%= link_to "Sign up", new_user_path %>
-      <%= link_to "Login", new_session_path %>
-    <% end %>
+      <% if logged_in? %>
+        <h2>Hello, <%= current_user.name %>! Please enjoy FacebookClone!</h2>
+        <%= link_to "Your Profile", user_path(current_user.id) %>
+        <%= link_to "Logout", session_path(current_user.id), method: :delete %>
+      <% else %>
+        <h2>Hello,Guest! Please log in here!</h2>
+        <%= link_to "Sign up", new_user_path %>
+        <%= link_to "Login", new_session_path %>
+      <% end %>
+    </header>
 
     <%= yield %>
+
+    <footer><p>FacebookClone created by Yuya Tsuno @2019</p></footer>
   </body>
 </html>
