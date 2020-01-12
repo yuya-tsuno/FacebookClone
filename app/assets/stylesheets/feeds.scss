@@ -1,40 +1,58 @@
-// Place all the styles related to the feeds controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 html {
-  position: relative;
-  min-height: 100%;
   background-color: rgb(196, 196, 196);
 }
 
 body {
   text-align: center;
+  min-height: 100vh;
+  position: relative;/*←相対位置*/
+  padding-bottom: 120px;/*←footerの高さ*/
+  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 header {
-  color: white;
+  top: 0;
+  position: fixed;
   width: 100%;
-  background-color: #1d6de6;
-  height: 100px;
-}
-
-header  a {
-  padding: 5px;
-  text-decoration: none;
+  height: 125px;
   color: white;
+  background-color: #1d6de6;
 }
 
+header a {
+  margin: 10px;
+  font-weight: bold;
+  color: #fff;
+
+  &:hover {
+    color: #666;
+    background-color: #fff;
+  }
+}
+
+.content {
+  width: 100%;
+  overflow: auto;
+  margin: 0 auto;
+  padding: 150px 0 0 0;
+}
+
+.title {
+  font-size: large;
+}
 
 footer {
   width: 100%;
   background-color:#1d6de6;
-  padding: 20px 0 10px 0;
   color: white;
-  margin: auto;
-  padding-bottom: 10px;
-  font-size: 12px;
-  // position: absolute;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: absolute;
   bottom: 0;
 }
-

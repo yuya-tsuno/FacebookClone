@@ -1,41 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Feeds</h1>
 <%= link_to 'New Feed', new_feed_path %>
+<p>-------------------------------------------------------------------------------------------------------------------------------------</p>
+<h1>Feeds</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Title</th>
-      <th>Rink</th>
-      <th>Post User</th>
-      <th>Functions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @feeds.each do |feed| %>
-      <tr>
-        <td colspan="5"><%= image_tag feed.image.url %></td>
-      </tr>
-      <tr>
-        <td colspan="5"><h3>Title: <%= feed.content %></h3></td>
-      </tr>
-      <tr>
-        <td><%= feed.image.url %></td>
-        <td><p>Posted by <%= feed.user.name %></p></td>
-        <td><%= link_to 'Show', feed %></td>
-        <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
-        <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-      <tr>
-        <td colspan="5">-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div class="feeds">
+  <% @feeds.each do |feed| %>
+    <p><%= image_tag feed.image.url %></p>
+    <p class="title"><strong><%= feed.content %></strong> by <%= feed.user.name %></p>
+    <p><%= link_to 'Show', feed %> | <%= link_to 'Edit', edit_feed_path(feed) %> | <%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <p>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+  <% end %>
+</div>
 
 <%= link_to 'New Feed', new_feed_path %>

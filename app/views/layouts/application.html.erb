@@ -10,24 +10,29 @@
   </head>
 
   <body>
+
     <header>
-      <% flash.each do |key, value| %>
-        <%= content_tag(:div, value, class: "#{key}") %>
-      <% end %>
+      <h1>FacebookClone</h1>
 
       <% if logged_in? %>
-        <h2>Hello, <%= current_user.name %>! Please enjoy FacebookClone!</h2>
+        <p>Hello, <%= current_user.name %>! Please enjoy FacebookClone!</p>
         <%= link_to "Your Profile", user_path(current_user.id) %>
         <%= link_to "Logout", session_path(current_user.id), method: :delete %>
       <% else %>
-        <h2>Hello,Guest! Please log in here!</h2>
+        <p>Hello,Guest! Please log in here for posting your photo!</p>
         <%= link_to "Sign up", new_user_path %>
         <%= link_to "Login", new_session_path %>
       <% end %>
     </header>
+    
+    <div class="content">
+      <%= yield %>
+    </div>
+    
+    <footer>
+    <p>FacebookClone created by Yuya Tsuno @2020</p>
+    </footer>
 
-    <%= yield %>
-
-    <footer><p>FacebookClone created by Yuya Tsuno @2019</p></footer>
   </body>
+
 </html>

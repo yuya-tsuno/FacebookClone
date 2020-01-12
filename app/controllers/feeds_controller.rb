@@ -24,13 +24,13 @@ class FeedsController < ApplicationController
   end  
 
   def edit
+    # binding.pry
+    @feed = Feed.find(params[:id])
+    @feed.image.cache! unless @feed.image.blank?
   end
 
   def create
-    # @feed = Feed.new(feed_params)
-    # @feed.user_id = current_user.id
     @feed = current_user.feeds.build(feed_params)
-
     respond_to do |format|
       if @feed.save
         format.html { redirect_to @feed, notice: 'Feed was successfully created.' }

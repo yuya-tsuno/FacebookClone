@@ -1,12 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @feed.image.url %>
-  <%= @feed.image.url %>
-  <p><%= @feed.content %></p>
-  <p>Posted by <%= @feed.user.name %></p>
-</p>
+<p><strong>Image</strong></p>
+<p><%= image_tag @feed.image.url %></p>
+<p>File name: <%= @feed.image.url %></p>
+<p>Title: <%= @feed.content %></p>
+<p>Posted by <%= @feed.user.name %></p>
 
 <%= link_to 'Edit', edit_feed_path(@feed) %> |
 <%= link_to 'Back', feeds_path %>
