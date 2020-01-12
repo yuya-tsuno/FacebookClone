@@ -10,7 +10,7 @@ Rails.application.configure do
   config.eager_load = false
 
   
-  # エラー画面変更のため一旦alseにしました、元はtrueです
+  # エラー画面変更のため一旦falseにしました、元はtrueです
   # Show full error reports.
   config.consider_all_requests_local = false
 

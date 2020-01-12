@@ -2,7 +2,7 @@ class FeedsController < ApplicationController
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
 
   def index
-    @feeds = Feed.all
+    @feeds = Feed.all.order(created_at: :desc)
   end
 
   def show
@@ -20,6 +20,8 @@ class FeedsController < ApplicationController
     # @feed = Feed.new(feed_params)
     # @feed.user_id = current_user.id
     @feed = current_user.feeds.build(feed_params)
+    @feed.id = params[:id]
+    # binding.pry
     render :new if @feed.invalid?
   end  
 
@@ -69,7 +71,7 @@ class FeedsController < ApplicationController
   end
 
   def feed_params
-    params.require(:feed).permit(:image, :image_cache, :content)
+    params.require(:feed).permit(:id, :image, :image_cache, :content)
   end
 
 end
