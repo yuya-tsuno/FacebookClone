@@ -12,7 +12,7 @@ Rails.application.configure do
   
   # エラー画面変更のため一旦alseにしました、元はtrueです
   # Show full error reports.
-  config.consider_all_requests_local = true
+  config.consider_all_requests_local = false
 
 
   # Enable/disable caching. By default caching is disabled.
